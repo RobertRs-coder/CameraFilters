@@ -63,6 +63,7 @@
 		230D4592290EEB9200130362 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		23E866E2290EF4BF00032822 /* CameraErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraErrorExtension.swift; sourceTree = "<group>"; };
 		23E866E4290EF50000032822 /* CameraStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStatus.swift; sourceTree = "<group>"; };
+		23E866E6290F0F3000032822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +118,8 @@
 				230D4577290EE4B900130362 /* Domain */,
 				230D457A290EE4D600130362 /* UI */,
 				230D4583290EE60F00130362 /* README.md */,
-				230D4551290EE42200130362 /* Assets.xcassets */,
+				23E866E7290F0F3C00032822 /* Resources */,
+				23E866E6290F0F3000032822 /* Info.plist */,
 				230D4553290EE42200130362 /* Preview Content */,
 			);
 			path = CameraFilters;
@@ -242,6 +244,14 @@
 				230D4590290EE92F00130362 /* FrameView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		23E866E7290F0F3C00032822 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				230D4551290EE42200130362 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,6 +555,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CameraFilters/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraFilters/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,6 +584,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CameraFilters/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CameraFilters/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
