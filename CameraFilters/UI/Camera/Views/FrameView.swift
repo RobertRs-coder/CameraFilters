@@ -13,7 +13,26 @@ struct FrameView: View {
     private let label = Text("Camera feed")
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // 1 Unwrap optional
+        if let image = image {
+          // 2 Set up GeometryReader to acess the size of the view which is necessary to ensure the image is clipped to the screen bounds
+          GeometryReader { geometry in
+            // 3 Create Image from CGImage, scale it to fill the frame and clip it to the bounds -> .upMirrored (front camera)
+            Image(image, scale: 1.0, orientation: .upMirrored, label: label)
+              .resizable()
+              .scaledToFill()
+              .frame(
+                width: geometry.size.width,
+                height: geometry.size.height,
+                alignment: .center)
+              .clipped()
+          }
+        } else {
+          // 4 Return a black view if the image property is nil
+          Color.black
+        }
+
     }
 }
 
