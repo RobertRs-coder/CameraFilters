@@ -4,7 +4,6 @@
 //
 //  Created by Roberto Rojo Sahuquillo on 30/10/22.
 //
-
 import Foundation
 
 extension CameraError: LocalizedError {

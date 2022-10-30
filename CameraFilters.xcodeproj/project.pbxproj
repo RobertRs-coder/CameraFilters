@@ -23,6 +23,8 @@
 		230D4593290EEB9200130362 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D4592290EEB9200130362 /* CameraManager.swift */; };
 		23E866E3290EF4BF00032822 /* CameraErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E866E2290EF4BF00032822 /* CameraErrorExtension.swift */; };
 		23E866E5290EF50000032822 /* CameraStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E866E4290EF50000032822 /* CameraStatus.swift */; };
+		23E866E9290F18C800032822 /* FrameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E866E8290F18C800032822 /* FrameManager.swift */; };
+		23E866EB290F195800032822 /* FrameManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E866EA290F195800032822 /* FrameManagerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		23E866E2290EF4BF00032822 /* CameraErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraErrorExtension.swift; sourceTree = "<group>"; };
 		23E866E4290EF50000032822 /* CameraStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStatus.swift; sourceTree = "<group>"; };
 		23E866E6290F0F3000032822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		23E866E8290F18C800032822 /* FrameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManager.swift; sourceTree = "<group>"; };
+		23E866EA290F195800032822 /* FrameManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameManagerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 			children = (
 				230D4586290EE6C200130362 /* CGImageExtension.swift */,
 				23E866E2290EF4BF00032822 /* CameraErrorExtension.swift */,
+				23E866EA290F195800032822 /* FrameManagerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				230D4592290EEB9200130362 /* CameraManager.swift */,
+				23E866E8290F18C800032822 /* FrameManager.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -388,9 +394,11 @@
 				230D458D290EE79A00130362 /* ToggleButton.swift in Sources */,
 				230D4550290EE42100130362 /* RootView.swift in Sources */,
 				230D458B290EE77D00130362 /* ErrorView.swift in Sources */,
+				23E866EB290F195800032822 /* FrameManagerExtension.swift in Sources */,
 				230D4587290EE6C200130362 /* CGImageExtension.swift in Sources */,
 				23E866E5290EF50000032822 /* CameraStatus.swift in Sources */,
 				23E866E3290EF4BF00032822 /* CameraErrorExtension.swift in Sources */,
+				23E866E9290F18C800032822 /* FrameManager.swift in Sources */,
 				230D454E290EE42100130362 /* CameraFiltersApp.swift in Sources */,
 				230D4585290EE66F00130362 /* CameraError.swift in Sources */,
 				230D4593290EEB9200130362 /* CameraManager.swift in Sources */,
