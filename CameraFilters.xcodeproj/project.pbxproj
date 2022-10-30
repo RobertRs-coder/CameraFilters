@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		230D454E290EE42100130362 /* CameraFiltersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D454D290EE42100130362 /* CameraFiltersApp.swift */; };
-		230D4550290EE42100130362 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D454F290EE42100130362 /* ContentView.swift */; };
+		230D4550290EE42100130362 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D454F290EE42100130362 /* RootView.swift */; };
 		230D4552290EE42200130362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 230D4551290EE42200130362 /* Assets.xcassets */; };
 		230D4555290EE42200130362 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 230D4554290EE42200130362 /* Preview Assets.xcassets */; };
 		230D455F290EE42200130362 /* CameraFiltersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D455E290EE42200130362 /* CameraFiltersTests.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		230D454A290EE42100130362 /* CameraFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		230D454D290EE42100130362 /* CameraFiltersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFiltersApp.swift; sourceTree = "<group>"; };
-		230D454F290EE42100130362 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		230D454F290EE42100130362 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		230D4551290EE42200130362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		230D4554290EE42200130362 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		230D455A290EE42200130362 /* CameraFiltersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraFiltersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,7 +212,7 @@
 		230D457F290EE52600130362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				230D454F290EE42100130362 /* ContentView.swift */,
+				230D454F290EE42100130362 /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 			files = (
 				230D4591290EE92F00130362 /* FrameView.swift in Sources */,
 				230D458D290EE79A00130362 /* ToggleButton.swift in Sources */,
-				230D4550290EE42100130362 /* ContentView.swift in Sources */,
+				230D4550290EE42100130362 /* RootView.swift in Sources */,
 				230D458B290EE77D00130362 /* ErrorView.swift in Sources */,
 				230D4587290EE6C200130362 /* Extension+CGImage.swift in Sources */,
 				230D454E290EE42100130362 /* CameraFiltersApp.swift in Sources */,

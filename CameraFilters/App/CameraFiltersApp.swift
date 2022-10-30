@@ -11,7 +11,7 @@ import SwiftUI
 struct CameraFiltersApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
