@@ -1,5 +1,5 @@
 //
-//  Extension+CGImage.swift
+//  CGImageExtension.swift
 //  CameraFilters
 //
 //  Created by Roberto Rojo Sahuquillo on 30/10/22.
