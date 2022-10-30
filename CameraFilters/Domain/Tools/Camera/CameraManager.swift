@@ -24,6 +24,11 @@ class CameraManager: ObservableObject {
     }
     
     private func configure() {
+        checkPermissions()
+        sessionQueue.async {
+          self.configureCaptureSession()
+          self.session.startRunning()
+        }
     }
     
     private func set(error: CameraError?) {
@@ -111,6 +116,16 @@ class CameraManager: ObservableObject {
         //Turn status configured
         status = .configured
 
+    }
+    
+    // Frame manager will be able to set itself as the delegate that receives that camera data.
+    func set(
+      _ delegate: AVCaptureVideoDataOutputSampleBufferDelegate,
+      queue: DispatchQueue
+    ) {
+      sessionQueue.async {
+        self.videoOutput.setSampleBufferDelegate(delegate, queue: queue)
+      }
     }
     
 }
