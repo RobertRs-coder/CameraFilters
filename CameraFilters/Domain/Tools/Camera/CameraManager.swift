@@ -8,24 +8,14 @@
 import AVFoundation
 // 1 Class that conforms to ObservableObject to use Combine
 class CameraManager: ObservableObject {
-  // 2 enum to represent the status of the camera
-  
-  // 3 Create static shared instance to easy acess
+
     static let shared = CameraManager()
 
-    @Published var error: CameraError?
+    private init() {
+        configure()
+    }
 
-    let session = AVCaptureSession()
-
-    private let sessionQueue = DispatchQueue(label: "com.robertrs.SessionQ")
-    private let videoOutput = AVCaptureVideoDataOutput()
-    private var status = CameraStatus.unconfigured
+    private func configure() {
+    }
     
-  // 4 Create singleton of camera manager with private init
-  private init() {
-    configure()
-  }
-  // 5 Create a method to configure the camera later
-  private func configure() {
-  }
 }

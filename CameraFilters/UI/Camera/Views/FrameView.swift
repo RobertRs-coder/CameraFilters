@@ -13,7 +13,6 @@ struct FrameView: View {
     private let label = Text("Camera feed")
 
     var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         // 1 Unwrap optional
         if let image = image {
           // 2 Set up GeometryReader to acess the size of the view which is necessary to ensure the image is clipped to the screen bounds
