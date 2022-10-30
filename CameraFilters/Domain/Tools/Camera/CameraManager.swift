@@ -6,7 +6,7 @@
 //
 
 import AVFoundation
-// 1 Class that conforms to ObservableObject to use Combine
+
 class CameraManager: ObservableObject {
 
     static let shared = CameraManager()
@@ -31,6 +31,34 @@ class CameraManager: ObservableObject {
         self.error = error
       }
     }
+    
+    private func checkPermissions() {
+      switch AVCaptureDevice.authorizationStatus(for: .video) {
+      case .notDetermined:
+        sessionQueue.suspend()
+        AVCaptureDevice.requestAccess(for: .video) { authorized in
+          
+          if !authorized {
+            self.status = .unauthorized
+            self.set(error: .deniedAuthorization)
+          }
+          self.sessionQueue.resume()
+        }
+      case .restricted:
+        status = .unauthorized
+        set(error: .restrictedAuthorization)
+      case .denied:
+        status = .unauthorized
+        set(error: .deniedAuthorization)
+      case .authorized:
+        break
+    
+      @unknown default:
+        status = .unauthorized
+        set(error: .unknownAuthorization)
+      }
+    }
+
 
     
 }
