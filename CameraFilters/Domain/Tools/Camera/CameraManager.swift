@@ -26,8 +26,8 @@ class CameraManager: ObservableObject {
     private func configure() {
         checkPermissions()
         sessionQueue.async {
-          self.configureCaptureSession()
-          self.session.startRunning()
+            self.configureCaptureSession()
+            self.session.startRunning()
         }
     }
     
@@ -87,45 +87,45 @@ class CameraManager: ObservableObject {
         
         //  Add the device input to AVCaptureSession:
         do {
-          let cameraInput = try AVCaptureDeviceInput(device: camera)
-          if session.canAddInput(cameraInput) {
-            session.addInput(cameraInput)
-          } else {
-            set(error: .cannotAddInput)
+            let cameraInput = try AVCaptureDeviceInput(device: camera)
+            if session.canAddInput(cameraInput) {
+                session.addInput(cameraInput)
+            } else {
+                set(error: .cannotAddInput)
+                status = .failed
+                return
+            }
+        } catch {
+            set(error: .createCaptureInput(error))
             status = .failed
             return
-          }
-        } catch {
-          set(error: .createCaptureInput(error))
-          status = .failed
-          return
         }
         
         // Connect the capture output to the AVCaptureSession!
         if session.canAddOutput(videoOutput) {
-          session.addOutput(videoOutput)
-          videoOutput.videoSettings =
+            session.addOutput(videoOutput)
+            videoOutput.videoSettings =
             [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
-          let videoConnection = videoOutput.connection(with: .video)
-          videoConnection?.videoOrientation = .portrait
+            let videoConnection = videoOutput.connection(with: .video)
+            videoConnection?.videoOrientation = .portrait
         } else {
-          set(error: .cannotAddOutput)
-          status = .failed
-          return
+            set(error: .cannotAddOutput)
+            status = .failed
+            return
         }
         //Turn status configured
         status = .configured
-
+        
     }
     
     // Frame manager will be able to set itself as the delegate that receives that camera data.
     func set(
-      _ delegate: AVCaptureVideoDataOutputSampleBufferDelegate,
-      queue: DispatchQueue
+        _ delegate: AVCaptureVideoDataOutputSampleBufferDelegate,
+        queue: DispatchQueue
     ) {
-      sessionQueue.async {
-        self.videoOutput.setSampleBufferDelegate(delegate, queue: queue)
-      }
+        sessionQueue.async {
+            self.videoOutput.setSampleBufferDelegate(delegate, queue: queue)
+        }
     }
     
 }
