@@ -59,6 +59,58 @@ class CameraManager: ObservableObject {
         }
     }
     
-    
+    private func configureCaptureSession() {
+        guard status == .unconfigured else {
+            return
+        }
+        session.beginConfiguration()
+        
+        //Execute finally at the exit of the scope of configureCaptureSession method
+        defer {
+            session.commitConfiguration()
+        }
+        // This code gets your capture device.
+        let device = AVCaptureDevice.default(
+            .builtInWideAngleCamera,
+            for: .video,
+            position: .front)
+        guard let camera = device else {
+            set(error: .cameraUnavailable)
+            status = .failed
+            return
+        }
+        
+        //  Add the device input to AVCaptureSession:
+        do {
+          let cameraInput = try AVCaptureDeviceInput(device: camera)
+          if session.canAddInput(cameraInput) {
+            session.addInput(cameraInput)
+          } else {
+            set(error: .cannotAddInput)
+            status = .failed
+            return
+          }
+        } catch {
+          set(error: .createCaptureInput(error))
+          status = .failed
+          return
+        }
+        
+        // Connect the capture output to the AVCaptureSession!
+        if session.canAddOutput(videoOutput) {
+          session.addOutput(videoOutput)
+          videoOutput.videoSettings =
+            [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
+          let videoConnection = videoOutput.connection(with: .video)
+          videoConnection?.videoOrientation = .portrait
+        } else {
+          set(error: .cannotAddOutput)
+          status = .failed
+          return
+        }
+        //Turn status configured
+        status = .configured
+
+    }
     
 }
