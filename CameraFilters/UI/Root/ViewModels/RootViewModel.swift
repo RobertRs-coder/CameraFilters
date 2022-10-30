@@ -7,7 +7,7 @@
 
 import CoreImage
 //The view model will then feed your view all the data it needs to display what you want
-class ContentViewModel: ObservableObject {
+class RootViewModel: ObservableObject {
   // 1 frame will hold the images that FrameView will display.
   @Published var frame: CGImage?
   // 2 Data used to generate frame will come from FrameManager.

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct RootView: View {
+    @StateObject private var viewModel = RootViewModel()
     
-  var body: some View {
-      FrameView(image: nil)
-        .edgesIgnoringSafeArea(.all)
-  }
+    var body: some View {
+        FrameView(image: viewModel.frame)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    RootView()
-  }
+    static var previews: some View {
+        RootView()
+    }
 }
