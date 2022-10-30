@@ -26,4 +26,11 @@ class CameraManager: ObservableObject {
     private func configure() {
     }
     
+    private func set(error: CameraError?) {
+      DispatchQueue.main.async {
+        self.error = error
+      }
+    }
+
+    
 }
