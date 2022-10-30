@@ -11,7 +11,13 @@ struct RootView: View {
     @StateObject private var viewModel = RootViewModel()
     
     var body: some View {
-        FrameView(image: viewModel.frame)
+        ZStack{
+            FrameView(image: viewModel.frame)
+                .edgesIgnoringSafeArea(.all)
+            
+            ErrorView(error: viewModel.error)
+        }
+
     }
 }
 
