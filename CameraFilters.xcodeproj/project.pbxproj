@@ -15,6 +15,7 @@
 		230D4569290EE42200130362 /* CameraFiltersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D4568290EE42200130362 /* CameraFiltersUITests.swift */; };
 		230D456B290EE42200130362 /* CameraFiltersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D456A290EE42200130362 /* CameraFiltersUITestsLaunchTests.swift */; };
 		230D4585290EE66F00130362 /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D4584290EE66F00130362 /* CameraError.swift */; };
+		230D4587290EE6C200130362 /* Extension+CGImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D4586290EE6C200130362 /* Extension+CGImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		230D456A290EE42200130362 /* CameraFiltersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFiltersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		230D4583290EE60F00130362 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		230D4584290EE66F00130362 /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
+		230D4586290EE6C200130362 /* Extension+CGImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CGImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 		230D4581290EE5E600130362 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				230D4586290EE6C200130362 /* Extension+CGImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230D4550290EE42100130362 /* ContentView.swift in Sources */,
+				230D4587290EE6C200130362 /* Extension+CGImage.swift in Sources */,
 				230D454E290EE42100130362 /* CameraFiltersApp.swift in Sources */,
 				230D4585290EE66F00130362 /* CameraError.swift in Sources */,
 			);
