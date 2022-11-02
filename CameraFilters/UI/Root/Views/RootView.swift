@@ -16,8 +16,14 @@ struct RootView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ErrorView(error: viewModel.error)
+            
+            ControlView(
+                comicSelected: $viewModel.comicFilter,
+                monoSelected: $viewModel.monoFilter,
+                crystalSelected: $viewModel.crystalFilter)
+            
         }
-
+        
     }
 }
 
